@@ -1,6 +1,57 @@
-*{border: 1px solid red;}
+/**{border: 1px solid red;}*/
 
-body{background-color: blue;}
+body{
+    background-color: rgb(202, 212, 230);
+    font-family: sans-serif;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+}
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
 
 
-.margenes{margin-top: 10px;}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(74, 121, 168);
+}
+
+#pond{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+ 
+ .contenedor{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 300px; 
+    height: 300px; 
+    margin: auto;
+
+}
