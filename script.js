@@ -1,23 +1,31 @@
-// Array de productos
-var productos = [
-    {
-      nombre: 'Llaveros Souvenirs + Tag Envoltorios + Estampitas',
-      precio: 4250,
-    },
-    {
-      nombre: 'Llaveros Souvenirs + Estuches Envoltorios + Estampitas',
-      precio: 4000,
-    },
-    {
-      nombre: 'Llaveros Souvenirs + Estampitas',
-      precio: 3700,
-    }
-  ];
-  
-  // Función para añadir un producto al carrito
-  function sumar(precio, nombre) {
-    // Lógica para añadir el producto al carrito
-    alert ("Aun no se puede acceder al carrito")
-  }
-  
+let CARRITO = [];
+let total = 0;
+
+function sumar(precio, producto) {
+  CARRITO.push(producto);
+  document.getElementById("cantidad").innerHTML = "Cantidad de productos: " + CARRITO.length;
+  total += precio;
+  document.getElementById("total").innerHTML = "TOTAL: $" + total;
+  alert ("Se ha añadido un producto a tu carrito")
+}
+
+function vaciarCarrito() {
+  CARRITO = [];
+  total = 0;
+  document.getElementById("cantidad").innerHTML = "Cantidad de productos: " + 0;
+  document.getElementById("total").innerHTML = "TOTAL: $" + total;
+}
+
+function comprar() {
+  vaciarCarrito();
+  alert("La compra se ha realizado con éxito");
+}
+
+const myModal = document.getElementById('myModal');
+const myInput = document.getElementById('myInput');
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus();
+});
+
 

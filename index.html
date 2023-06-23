@@ -16,169 +16,364 @@
         <h2 class="nombre-empresa">Dikit Creativo</h2>
     </a>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li> 
-              
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Productos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Estampitas</a></li>
-                  <li><a class="dropdown-item" href="#">Kits digitales</a></li>
-                  <li><a class="dropdown-item" href="#">Personalizados</a></li>
-                </ul>
-              </li>
-              
-            </ul>
-
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="buscar" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-              </form>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                  <h1 class="offcanvas-title" id="offcanvasNavbarLabel">Dikit Creativo</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" href="#">
+                              <span class="material-symbols-outlined">CARRITO</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
           </div>
+      </div>
+    </nav>
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Mi Carrito</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="container">
+            <div class="row row-cols-1">
+              <div class="col">
+                <div id="cantidad">Cantidad de productos: 0</div>
+               </div>
+              <div class="col">
+                <div id="total">TOTAL: $0</div>
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-primary carrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-primary carrito" onclick="comprar()">Finalizar Compra</button>
+              </div>
+              
+            </div>
         </div>
-      </nav>
+    </div>
+</div>    
+  
+  
 
 </header>
 
 
-    <main>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Dikit carousel.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="Dikit Carousel 1.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="Dikit carousel 2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="Dikit carousel 3.png" class="d-block w-100" alt="...">
-                </div>
+<main>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="DikitCarousel.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="DikitCarousel2.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="DikitCarousel3.jpeg" class="d-block w-100" alt="...">
             </div>
         </div>
-        <br>
-                
-        <main>
+    </div>
 
-          <div class="row row-cols-2 row-cols-md-4 g-6">
-            <div id="carouselExample1" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="Souvenir0.webp" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir1.webp" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir3.webp" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir2.webp" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Llaveros Souvenirs + Tag Envoltorios + Estampitas</h5>
-                  <p class="card-text">$4250,00</p>
-                  <button type="button" class="btn btn-primary" onclick="sumar(4250,'Llaveros Souvenirs + Tag Envoltorios + Estampitas')">Añadir al carrito</button>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
+
+    <div class="row row-cols-2 row-cols-md-4 g-6">
+      <div class="card">
+        <div id="carouselExample1" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Souvenir0.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir2.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Llaveros Souvenirs + Tag Envoltorios + Estampitas</h5>
+            <p class="card-text">$4250,00</p>
+            <button type="button" class="btn btn-primary" onclick="sumar(4250,'Llaveros Souvenirs + Tag Envoltorios + Estampitas')">Añadir al carrito</button>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+      
+      
+    
+      <div class="card">
+        <div id="carouselExample2" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Souvenir5 copia.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir6 copia.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir7 copia.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir8 copia.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Llaveros Souvenirs + Estuches Envoltorios + Estampitas</h5>
+            <p class="card-text">$4000,00</p>
+            <button type="button" class="btn btn-primary" onclick="sumar(4000,'Llaveros Souvenirs + Tag Envoltorios + Estampitas')">Añadir al carrito</button>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div id="carouselExample3" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Souvenir9.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir10 .jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir11 .jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir12 .jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Llaveros Souvenirs + Estampitas</h5>
+            <p class="card-text">$3700,00</p>
+            <button type="button" class="btn btn-primary" onclick="sumar(3700,'Llaveros Souvenirs + Estampitas')">Añadir al carrito</button>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="carouselExample4" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Souvenir13.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir14.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir15.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir16.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Kit Imprimible Digital</h5>
+            <br>
+            <p class="card-text">$3000,00</p>
+            <button type="button" class="btn btn-primary" onclick="sumar(3000,'Kit Imprimible Digital')">Añadir al carrito</button>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+          </div>
+      </div>
+
+      <div class="card">
+        <div id="carouselExample5" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Souvenir19.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Souvenir18.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Souvenir20.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Souvenir27.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Llaveros Souvenirs + Tag Envoltorios + Estampitas</h5>
+          <p class="card-text">$4500,00</p>
+          <button type="button" class="btn btn-primary" onclick="sumar(4500,'Llaveros Souvenirs + Tag Envoltorios + Estampitas')">Añadir al carrito</button>
+        </div>
+      
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample5" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample5" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="carouselExample6" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Souvenir21.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="souvenir22.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir23.jpeg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Llaveros Souvenirs + Estampitas</h5>
+            <p class="card-text">$3000,00</p>
+            <button type="button" class="btn btn-primary" onclick="sumar(3000,'Llaveros Souvenirs + Estampitas')">Añadir al carrito</button>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample6" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample6" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+
+
+      
+      <div class="card">
+        <div id="carouselExample7" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Souvenir24.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir25.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir26.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="Souvenir28.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+            <div class="card-body">
+              <h5 class="card-title">Kit Imprimible Digital</h5>
+              <br>
+              <p class="card-text">$3000,00</p>
+              <button type="button" class="btn btn-primary" onclick="sumar(3000,'Kit Imprimible Digital')">Añadir al carrito</button>
             </div>
           
-            <div id="carouselExample2" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="Souvenir5 copia.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir6 copia.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir7 copia.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir8 copia.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Llaveros Souvenirs + Estuches Envoltorios + Estampitas</h5>
-                  <p class="card-text">$4000,00</p>
-                  <button type="button" class="btn btn-primary" onclick="sumar(4000,'Llaveros Souvenirs + Tag Envoltorios + Estampitas')">Añadir al carrito</button>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample7" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample7" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+      </div>
+
+
+      <div class="card">
+        <div id="carouselExample8" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Souvenir29.jpeg" class="d-block w-100" alt="...">
             </div>
-
-            <div id="carouselExample3" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="Souvenir9.webp" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir10 .jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir11 .jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Souvenir12 .jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Llaveros Souvenirs + Estampitas</h5>
-                  <br>
-                  <p class="card-text">$3700,00</p>
-                  <button type="button" class="btn btn-primary" onclick="sumar(3700,'Llaveros Souvenirs + Tag Envoltorios + Estampitas')">Añadir al carrito</button>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
+            <div class="carousel-item">
+              <img src="Souvenir30.jpeg" class="d-block w-100" alt="...">
             </div>
+            </div>
+              <div class="card-body">
+              <h5 class="card-title">Llavero personalizado + Estampita</h5>
+              <p class="card-text">$3000,00</p>
+              <button type="button" class="btn btn-primary" onclick="sumar(3000,'Llaveros personalizado + Estampitas')">Añadir al carrito</button>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample8" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample8" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+      </div>    
+    </div>
 
+</main>
 
-    </main>
+ <footer>
+    <div class="fila">
+        <div class="col">
+          <h3>Medios de pago</h3>
+            <div class="iconos">
+              <img class="icon" src="/logo-mercadopago.jpg" alt="">
+            </div>
+        </div>
 
+        <div class="col">
+            <h3>Medios de envio</h3>
+            <div class="iconos">
+              <img class="icon" src="/mercado-envio.png" alt="">
+            </div>
+        </div>
 
-   <footer>
-
-
-   </footer> 
+        <div class="col">
+            <h3>Redes Sociales</h3>
+            <ul>
+                <li class="fot"><a href="https://www.instagram.com/dikitcreativo/">Instagram</a></li>
+                <li class="fot"><a href="https://listado.mercadolibre.com.ar/_CustId_166300625">Mercado Libre </a></li>
+            </ul>
+        </div>
+    </div>
+  </footer> 
 
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
